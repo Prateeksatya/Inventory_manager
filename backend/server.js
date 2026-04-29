@@ -12,6 +12,11 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 
+// Base route for health check
+app.get('/', (req, res) => {
+  res.send('OpsCore Backend API is running!');
+});
+
 // ─────────────────────────────────────────────
 // In‑memory data (same as your frontend demo)
 // ─────────────────────────────────────────────
